@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Acreditaciones</title>
+<meta name="theme-color" content="#0A1220">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- Estilos y recursos -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Encabezado y pestañas -->
+<header>
+  <div class="row"><div><h1>Acreditaciones</h1><small>Corte del 27/10/2026</small></div><span class="sp"></span><button class="ic" id="menuBtn" aria-label="Menú">⋮</button></div>
+  <div class="tabs"><button id="t1" class="on">Acreditaciones</button><button id="t2">Vacaciones </button></div>
+</header>
+<!-- Contenido (lo dibuja js/app.js) -->
+<main id="app"></main>
+<!-- Pantalla de contraseña -->
+<div id="lock"><form id="lf" autocomplete="off"><h2>Acreditaciones</h2><p>Ingresa la contraseña para continuar</p><input type="password" id="pw" placeholder="Contraseña" autocomplete="current-password" aria-label="Contraseña"><button type="submit">Entrar</button><div id="err" role="alert"></div></form></div>
+<!-- Botón flotante: agregar colaborador -->
+<button class="fab" id="add" aria-label="Agregar colaborador">+</button>
+<!-- Ventana inferior y aviso "Guardado" -->
+<dialog id="dlg"></dialog><div id="toast"></div>
+<!-- Selector oculto para restaurar respaldo -->
+<input type="file" id="file" accept="application/json" hidden>
+
+<!-- Scripts: primero los datos, luego la lógica -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
